@@ -14,6 +14,7 @@ body {
     padding:0;
     margin:0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -25,4 +26,13 @@ body.correct {
     background-color: var(--correct-answer);
 }
 
+body.incorrect {
+    background-color: var(--incorrect-answer);
+}
+
+.container {
+    width: 80%;
+    max-width: 80%;
+
+}
 
