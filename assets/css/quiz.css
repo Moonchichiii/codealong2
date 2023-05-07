@@ -21,3 +21,22 @@ body {
     height: 100vh;
     background-color: var(--background-color);    
 }
+
+body.correct {
+    background-color: var(--correct-answer);
+}
+
+body.incorrect {
+    background-color: var(--incorrect-answer);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    width: 70vw;
+    max-width: 70%;
+
+}
+
