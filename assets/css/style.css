@@ -31,8 +31,12 @@ body.incorrect {
 }
 
 .container {
-    width: 80%;
-    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    width: 70vw;
+    max-width: 70%;
 
 }
 
