@@ -1,15 +1,19 @@
+
+// SignIn function and alert function if (!username). 
+
 function Login() {
-    const gameNameInput = document.getElementById("username")
-    const username = gameNameInput.value;
+    var gameNameInput = document.getElementById("username");
+    var username = gameNameInput.value;
 
     if (!username) {
-        alert("Please choose a username!");
-        return;
+      alert("Please choose a username!");
+      return;
     }
+
     window.localStorage.setItem("username", username);
     window.location.href = "quiz.html";
-}
+  }
 
-const username = windows.localStorage.getItem("username");
-document.getElementById("username-displayed").textContent = username;
 
+  var username = window.localStorage.getItem("username");
+  document.getElementById("username-displayed").textContent = username;
