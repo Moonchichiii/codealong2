@@ -44,6 +44,8 @@ body.incorrect {
 /* components */
 .social {
     display: flex;
+    justify-content: center;
+    text-align: center;
     align-items: center;
 }
 
@@ -52,7 +54,7 @@ i {
     color:var(--social-link-colors)
 }
 
-i:hover:active {
+i:hover {
     transition: 200ms;
     transform: scale(1.2);
     color:var(--social-hover-colors);
