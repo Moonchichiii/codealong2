@@ -15,6 +15,7 @@
     --text-color:#A0AECD;
     
     /* Buttons */
+    --signin-button:#FECD45;
     --button-color:#5EBEC4;
     /* Links colors */
     --social-link-colors:slategrey;
@@ -95,7 +96,8 @@ input {
 
 input[type="submit"]{
     border:none;
-    background-color: var(--button-color);
+    
+    background-color:var(--signin-button);
     border-radius: 15px;
     padding: 5px;
     
