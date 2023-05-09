@@ -40,3 +40,20 @@ body.incorrect {
 
 }
 
+
+/* components */
+.social {
+    display: flex;
+    align-items: center;
+}
+
+i {
+    font-size:2rem;
+    color:var(--social-link-colors)
+}
+
+i:hover:active {
+    transition: 200ms;
+    transform: scale(1.2);
+    color:var(--social-hover-colors);
+}
