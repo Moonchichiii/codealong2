@@ -4,7 +4,7 @@
 
 *,*::before, *::after {
     box-sizing:border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 :root {
     /*Background colors*/
@@ -36,8 +36,11 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: var(--background-color);    
-    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 86%);
+    font-family: 'Playfair Display', serif;
+    font-size:1.4rem;
+    font-weight: 500;
+    background: rgb(2,0,36);
+    background: linear-gradient(11deg, rgba(2,0,36,1) 0%, rgba(88,9,121,1) 23%, rgba(0,212,255,1) 100%);
 }
 
 /* main layout  */
@@ -45,7 +48,11 @@ body {
 header {
     display: flex;
     justify-content: center;
-    
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    top:0;
+    background-color: var(--footer-bkg-color);
 }
 
 main {
@@ -99,8 +106,12 @@ input[type="submit"]{
     
     background-color:var(--signin-button);
     border-radius: 15px;
-    padding: 5px;
-    
+    padding: 5px;    
+}
+
+input[type="submit"]:hover {
+    color: white;
+    background-color: var(--headings-color);
 }
 
 
