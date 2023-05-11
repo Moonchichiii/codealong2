@@ -90,20 +90,6 @@ footer {
 
 /* buttons & answer buttons */
 
-#answer-buttons {
-    border:none;    
-    background-color:var(--signin-button);
-    border-radius: 15px;
-    padding: 5px;    
-    
-}
-#answer-buttons {
-    color: var(--social-link-colors);
-    background-color: var(--social-hover-colors);
-}
-
-
-
 .btn {
     border:none;    
     background-color:var(--signin-button);
