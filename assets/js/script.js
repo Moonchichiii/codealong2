@@ -19,19 +19,24 @@ function Login() {
   document.getElementById("username-displayed").textContent = username;
 
 
-
-  // start quiz function 
-
-const startButton = document.getElementById("start-btn") {
-  startButton.addEventListener('click' startQuiz);
-}
+  setInterval(() => {
+    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+  }, 1000);
+  
 
 
-startQuiz()
+  //* start quiz function 
+
+/*const startButton = document.getElementById("start-btn") {*/
+  /*startButton.addEventListener('click' startQuiz);*/
 
 
 
-bring on the questions. 
+/*startQuiz()*/
+
+
+
+/*bring on the questions. */
 
 
   

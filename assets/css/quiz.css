@@ -86,7 +86,7 @@ body.incorrect {
 
 /* components */
 
-.hide {
+.hide  {
     display:none;
 }
 
@@ -98,7 +98,10 @@ body.incorrect {
     margin-left:2%;
 }
 
-
+#time {
+    font-size:1.5rem;
+    margin: auto;
+}
 
 .question {
     border:1px soild black;
@@ -109,11 +112,11 @@ body.incorrect {
     align-items: center;
     justify-content: center;
     gap: 2%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 i {
-    font-size:2rem;
+    font-size:1.5rem;
     color:var(--social-link-colors)
 }
 
