@@ -17,16 +17,25 @@
 
 <main>
     
-    <script>
-        window.onload = function() {
-          var correctScore = localStorage.getItem('correctScore');
-          var incorrectScore = localStorage.getItem('incorrectScore');
-        
-          document.getElementById('correct').innerText = correctScore;
-          document.getElementById('incorrect').innerText = incorrectScore;
-        };
-        </script>
+    
+    <div id="display-score">
 
+        <h2>Your final score</h2>
+
+        <div id="correct"></div>
+        <div id="incorrect"></div>
+
+
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+        <button id="return-btn" class="btn">Return to Start Page</button>
+
+
+    </div>           
+    
+
+
+
+    
 </main>
 
 <footer> 
@@ -45,6 +54,15 @@
     
 </footer>
     
+<script>
+    window.onload = function() {
+      var correctScore = localStorage.getItem('correctScore');
+      var incorrectScore = localStorage.getItem('incorrectScore');
+    
+      document.getElementById('correct').innerText = correctScore;
+      document.getElementById('incorrect').innerText = incorrectScore;
+    };
+    </script>
 
 <script src="assets/js/script.js"></script>
 <script src="https://kit.fontawesome.com/97d1638932.js" crossorigin="anonymous"></script>
