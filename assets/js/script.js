@@ -110,28 +110,54 @@ let correctScore = 0;
 let incorrectScore = 0;
 
 function selectAnswer(e) {
-  
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
+
+  const correctAnswer = document.getElementById('correct');
+  const incorrect = document.getElementById('incorrect');
+
   if (correct) {
     correctScore++;
+    correctAnswer.style.color = "green";
+    setTimeout(() => {
+      correctAnswer.style.color = "";
+    }, 3000);
   } else {
     incorrectScore++;
+    incorrect.style.color = "red";
+    setTimeout(() => {
+      incorrect.style.color = "";
+    }, 3000);
   }
-  
+
   nextButton.disabled = true;
 
-  document.getElementById('correct').innerText = correctScore;
-  document.getElementById('incorrect').innerText = incorrectScore;
+  correctAnswer.innerText = correctScore;
+  incorrect.innerText = incorrectScore;
 
-   setTimeout(nextQuestion, 1500);
+  setTimeout(() => {
+    nextButton.disabled = false;
+    nextQuestion();
+  }, 1500);
+}
 
-  }
 
   function endQuiz() {
+    
+    localStorage.setItem('correctScore', correctScore);
+    localStorage.setItem('incorrectScore', incorrectScore);
+    window.location.href = "finished.html";
+    
+        
     if (correctScore === 0 && incorrectScore === 0) {
       alert("You have not played the game and your score is zero.");
     } 
+    else {
+    localStorage.setItem('correctScore', correctScore);
+    localStorage.setItem('incorrectScore', incorrectScore);
+    window.location.href = "finished.html";
+    }
+   
   }
 
 
