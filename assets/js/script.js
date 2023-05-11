@@ -106,13 +106,13 @@ function selectAnswer(addEventListener) {
     correctScoreElement.style.color = "green";
     setTimeout(() => {
       correctScoreElement.style.color = "";
-    }, 3000);
+    }, 2000);
   } else {
     incorrectScore++;
     incorrectScoreElement.style.color = "red";
     setTimeout(() => {
       incorrectScoreElement.style.color = "";
-    }, 3000);
+    }, 2000);
   }
   
   nextButton.disabled = true;
