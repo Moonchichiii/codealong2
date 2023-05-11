@@ -44,8 +44,14 @@ let shuffleQuestion, currentQuestionIndex;
 const answerButtonElement = document.getElementById("answer-buttons"); 
 
 function startQuiz() {  
+  var gameInstructions = document.getElementById("instructions");
+  gameInstructions.classList.add("hide");
+
   var questionContainer = document.getElementById("question-container");  
   startButton.classList.add("hide");
+  
+  
+  
   questionContainer.classList.remove("hide");
 
   var scoreBoard = document.getElementById("scoreboard");
