@@ -73,6 +73,13 @@ body.incorrect {
     background-color: var(--incorrect-answer);
 }*/
 
+
+
+
+/* game layout  */ 
+
+/* main game container */
+
 .container {
     display: flex;
     justify-content: center;
@@ -80,7 +87,28 @@ body.incorrect {
     margin: 2% auto;
     width: 70vw;
     max-width: 70%;
+}
 
+
+#question {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+
+/* answer buttons */
+
+
+/* scoreboard */
+
+.score {
+    display: flex;
+    flex-direction: column;
+    /*gap:5%;*/
+    text-align: center;
+    align-items: center;
+    
 }
 
 
@@ -90,8 +118,6 @@ body.incorrect {
     display:none;
 }
 
-
-
 #showplayer {
     font-size:1.5rem;
     font-weight: 500;
@@ -100,11 +126,8 @@ body.incorrect {
 
 #time {
     font-size:1.5rem;
-    margin: auto;
-}
-
-.question {
-    border:1px soild black;
+    float:right;
+    margin-left: 70%;
 }
 
 .social {

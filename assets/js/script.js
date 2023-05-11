@@ -19,30 +19,37 @@ function Login() {
   document.getElementById("username-displayed").textContent = username;
 
 
+
+// time show
+
+
   setInterval(() => {
     document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
   }, 1000);
   
 
 
-  //* start quiz function 
+// Start button (start quiz)
 
-/*const startButton = document.getElementById("start-btn") {*/
-  /*startButton.addEventListener('click' startQuiz);*/
+const startButton = document.getElementById("start-btn");
 
-
-
-/*startQuiz()*/
+startButton.addEventListener('click', startQuiz)
 
 
 
-/*bring on the questions. */
 
-
+function startQuiz() {
   
+  var questionContainer = document.getElementById("question-container");
+  
+  startButton.classList.add("hide");
 
+  questionContainer.classList.remove("hide");
 
-
+  var scoreBoard = document.getElementById("scoreboard");
+  scoreBoard.classList.remove("hide");
+ 
+ }
 
 
 
