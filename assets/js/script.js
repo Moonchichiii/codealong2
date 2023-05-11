@@ -32,20 +32,6 @@ function Login() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const startButton = document.getElementById("start-btn");
 startButton.addEventListener('click', startQuiz);
 
@@ -156,6 +142,7 @@ function selectAnswer(addEventListener) {
    
   }
 
+
  const questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',
@@ -240,16 +227,6 @@ function selectAnswer(addEventListener) {
   },
 
 ];
-
-
-
-
-
-
-
-
-
-
 
 
 
