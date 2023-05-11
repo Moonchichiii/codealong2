@@ -116,11 +116,11 @@ input[type="submit"]:hover {
     align-items: center;
     justify-content: center;
     gap: 2%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 i {
-    font-size:2rem;
+    font-size:1.5rem;
     color:var(--social-link-colors)
 }
 
@@ -128,4 +128,15 @@ i:hover {
     transition: 200ms;
     transform: scale(1.2);
     color:var(--social-hover-colors);
+}
+
+
+/* @ media */
+
+@media screen (min-width:281px) and (max-width:678px){
+
+    .signin {
+        display:flex;
+        flex-direction:coloum;
+    }
 }
