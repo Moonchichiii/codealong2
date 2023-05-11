@@ -109,36 +109,32 @@ function resetState() {
 let correctScore = 0;
 let incorrectScore = 0;
 
-function selectAnswer(e) {
-  const selectedButton = e.target;
+function selectAnswer(addEventListener) {
+  const selectedButton = addEventListener.target;
   const correct = selectedButton.dataset.correct;
-
-  const correctAnswer = document.getElementById('correct');
-  const incorrect = document.getElementById('incorrect');
+  const correctScoreElement = document.getElementById('correct');
+  const incorrectScoreElement = document.getElementById('incorrect');
 
   if (correct) {
     correctScore++;
-    correctAnswer.style.color = "green";
+    correctScoreElement.style.color = "green";
     setTimeout(() => {
-      correctAnswer.style.color = "";
+      correctScoreElement.style.color = "";
     }, 3000);
   } else {
     incorrectScore++;
-    incorrect.style.color = "red";
+    incorrectScoreElement.style.color = "red";
     setTimeout(() => {
-      incorrect.style.color = "";
+      incorrectScoreElement.style.color = "";
     }, 3000);
   }
-
+  
   nextButton.disabled = true;
 
-  correctAnswer.innerText = correctScore;
-  incorrect.innerText = incorrectScore;
+  correctScoreElement.innerText = correctScore;
+  incorrectScoreElement.innerText = incorrectScore;
 
-  setTimeout(() => {
-    nextButton.disabled = false;
-    nextQuestion();
-  }, 1500);
+  setTimeout(nextQuestion, 1500);
 }
 
 
@@ -159,7 +155,6 @@ function selectAnswer(e) {
     }
    
   }
-
 
  const questions = [
   {
