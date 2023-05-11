@@ -28,47 +28,114 @@ function Login() {
   }, 1000);
   
 
-
 // Start button (start quiz)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const startButton = document.getElementById("start-btn");
+startButton.addEventListener('click', startQuiz);
 
-startButton.addEventListener('click', startQuiz)
+const questionElement = document.getElementById("questions");
+const nextButton = document.getElementById("next-btn");
+nextButton.addEventListener('click', nextQuestion);
 
+let shuffleQuestion, currentQuestionIndex;
 
+const answerButtonElement = document.getElementById("answer-buttons"); 
 
-
-function startQuiz() {
-  
-  var questionContainer = document.getElementById("question-container");
-  
+function startQuiz() {  
+  var questionContainer = document.getElementById("question-container");  
   startButton.classList.add("hide");
-
   questionContainer.classList.remove("hide");
 
   var scoreBoard = document.getElementById("scoreboard");
   scoreBoard.classList.remove("hide");
- 
- }
+
+  nextButton.classList.remove("hide");
+
+  shuffleQuestion = questions.sort(() => Math.random() - 0.5)
+  currentQuestionIndex = 0;
+  showQuestion(shuffleQuestion[currentQuestionIndex]);
+}
+
+function nextQuestion() {
+  resetState();
+  currentQuestionIndex++;
+  if (currentQuestionIndex < shuffleQuestion.length) {
+    showQuestion(shuffleQuestion[currentQuestionIndex]);
+  } else {
+    endQuiz();
+  }
+}
+
+function showQuestion(question) {
+  questionElement.innerText = question.question;
+  question.answers.forEach(answer => {
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click', selectAnswer);
+    answerButtonElement.appendChild(button);
+
+    nextButton.disabled = false;
+    
+  });
+}
+
+function resetState() {
+  while (answerButtonElement.firstChild) {
+    answerButtonElement.removeChild(answerButtonElement.firstChild);
+  }
+}
 
 
+let correctScore = 0;
+let incorrectScore = 0;
+
+function selectAnswer(e) {
+  
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  if (correct) {
+    correctScore++;
+  } else {
+    incorrectScore++;
+  }
+  
+  nextButton.disabled = true;
+
+  document.getElementById('correct').innerText = correctScore;
+  document.getElementById('incorrect').innerText = incorrectScore;
+
+   setTimeout(nextQuestion, 1500);
+
+  }
+
+  function endQuiz() {
+    if (correctScore === 0 && incorrectScore === 0) {
+      alert("You have not played the game and your score is zero.");
+    } 
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /**let questions = [
+ const questions = [
   {
     question: 'In which city is the famous Edvard Eriksen statue, The Little Mermaid?',
     answers: [
@@ -151,4 +218,21 @@ function startQuiz() {
     ]
   },
 
-]; */
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
